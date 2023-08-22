@@ -16,15 +16,19 @@ const Header = ({ itensNoCarrinho }: Props) => {
   }, 0)
 
   return (
-    <S.Header>
-      <h1>EBAC Games</h1>
-      <div>
-        <img src={cesta} />
-        <span>
-          {itensNoCarrinho.length} itens, valor total: {paraReal(valorTotal)}
-        </span>
-      </div>
-    </S.Header>
+    <>
+      <S.Header>
+        <h1>EBAC Games</h1>
+        <div>
+          <img src={cesta} />
+          <span>
+            {itensNoCarrinho.length} itens, valor total: {paraReal(valorTotal)}
+          </span>
+        </div>
+      </S.Header>
+      <div data-testid="frase-um">Primeiro comentário do exercicio</div>
+      <div data-testid="frase-dois">Segundo comentário do exercicio</div>
+    </>
   )
 }
 
